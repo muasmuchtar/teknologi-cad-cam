@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teknologi CAD CAM</title>
+<meta name="description" content="Materi Teknologi CAD CAM D4 Teknik Manufaktur PNUP: 18 topik dari sejarah CAD/CAM, perangkat keras, standar data, pemodelan geometri, hingga manufaktur aditif dan PLM.">
+<style>
+  :root{
+    --bg:#F3F5F9; --panel:#FFFFFF; --ink:#18213A; --soft:#5E6A82; --line:#DDE3EC;
+    --navy:#14284B; --navy2:#1F3F73; --yellow:#F5B700; --cyan:#12A4C4; --cyan-bg:#E2F5FA;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#0F1524; --panel:#18213A; --ink:#E8ECF4; --soft:#A3AEC4; --line:#2A3654; --cyan-bg:#13324170; }
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.5;}
+  header{background:linear-gradient(120deg,var(--navy),var(--navy2));color:#fff;padding:40px 16px 56px;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 16px;}
+  header .wrap{padding:0;}
+  .tag{display:inline-block;background:var(--yellow);color:#2B2100;font-weight:800;font-size:12px;letter-spacing:.06em;padding:4px 10px;border-radius:20px;text-transform:uppercase;}
+  h1{margin:12px 0 6px;font-size:clamp(24px,4vw,34px);line-height:1.2;}
+  header p{margin:0;color:#C8D3EA;max-width:700px;font-size:15px;}
+  .related{margin:-30px auto 22px;background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--yellow);border-radius:12px;padding:12px 16px;font-size:13.5px;color:var(--soft);box-shadow:0 6px 20px rgba(20,40,75,.08);display:flex;gap:8px 18px;flex-wrap:wrap;align-items:center;}
+  .related a{color:var(--cyan);font-weight:700;text-decoration:none;}
+  h2.sec{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);margin:22px 0 10px;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;}
+  .card:hover{border-color:var(--cyan);}
+  .card img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-bottom:1px solid var(--line);background:#0B1424;}
+  .card div{padding:11px 13px 13px;display:flex;flex-direction:column;gap:6px;flex:1;}
+  .num{font-family:"SFMono-Regular",Consolas,monospace;font-weight:800;font-size:12px;color:var(--cyan);background:var(--cyan-bg);padding:2px 8px;border-radius:20px;align-self:flex-start;}
+  .card b{font-size:14.5px;line-height:1.3;flex:1;}
+  .card small{color:var(--soft);font-size:12.5px;}
+  footer{border-top:1px solid var(--line);margin-top:28px;padding:18px 0 40px;font-size:12.5px;color:var(--soft);}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <span class="tag">Teknologi CAD CAM · D4 Teknik Manufaktur · PNUP</span>
+    <h1>Teknologi CAD CAM</h1>
+    <p>Delapan belas topik: sejarah dan perkembangan CAD/CAM, perangkat keras dan lunak, standar pertukaran data, teknik pemodelan geometri, hingga manufaktur aditif dan manajemen siklus hidup produk.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="related">Materi terkait:
+    <a href="https://muasmuchtar.github.io/simulasi-teknik-manufaktur/visualisasi/">🖼️ Visualisasi Materi CAD/CAM</a>
+    <a href="https://muasmuchtar.github.io/topik-mastercam/">🖥️ Topik Bahasan Mastercam 2026</a>
+    <a href="https://muasmuchtar.github.io/simulasi-teknik-manufaktur/#cadcam">💻 Simulator CAD/CAM</a>
+  </div>
+  <div id="groups"></div>
+</main>
+
+<footer class="wrap">Politeknik Negeri Ujung Pandang · Disusun oleh Muas M. Setiap topik dibuka sebagai PDF di tab baru.</footer>
+
+<script>
+  const D = [{"n": 1, "t": "Teknologi CAD/CAM: Dari Asal Mula hingga Masa Depan", "f": "materi/01-teknologi-cadcam-asal-mula-masa-depan.pdf", "img": "materi/01-teknologi-cadcam-asal-mula-masa-depan.jpg", "p": 25}, {"n": 2, "t": "Perangkat Keras Komputer: Mengapa Penting?", "f": "materi/02-perangkat-keras-komputer.pdf", "img": "materi/02-perangkat-keras-komputer.jpg", "p": 24}, {"n": 3, "t": "Komputer Keteknikan & Kelas Komputer", "f": "materi/03-komputer-keteknikan-kelas-komputer.pdf", "img": "materi/03-komputer-keteknikan-kelas-komputer.jpg", "p": 19}, {"n": 4, "t": "Analisis Perangkat Lunak", "f": "materi/04-analisis-perangkat-lunak.pdf", "img": "materi/04-analisis-perangkat-lunak.jpg", "p": 7}, {"n": 5, "t": "Mengenal Video Card / Kartu Grafis", "f": "materi/05-kartu-grafis.pdf", "img": "materi/05-kartu-grafis.jpg", "p": 6}, {"n": 6, "t": "Standar CAD dan Penerjemah (IGES, STEP, DXF, ACIS)", "f": "materi/06-standar-cad-dan-penerjemah.pdf", "img": "materi/06-standar-cad-dan-penerjemah.jpg", "p": 8}, {"n": 7, "t": "Representasi 3D dalam Desain Teknik", "f": "materi/07-representasi-3d.pdf", "img": "materi/07-representasi-3d.jpg", "p": 8}, {"n": 8, "t": "Pemrosesan Paralel", "f": "materi/08-pemrosesan-paralel.pdf", "img": "materi/08-pemrosesan-paralel.jpg", "p": 8}, {"n": 9, "t": "Engineering Workstation", "f": "materi/09-engineering-workstation.pdf", "img": "materi/09-engineering-workstation.jpg", "p": 8}, {"n": 10, "t": "Constructive Solid Geometry (CSG)", "f": "materi/10-constructive-solid-geometry.pdf", "img": "materi/10-constructive-solid-geometry.jpg", "p": 8}, {"n": 11, "t": "Wireframe Modeling", "f": "materi/11-wireframe-modeling.pdf", "img": "materi/11-wireframe-modeling.jpg", "p": 8}, {"n": 12, "t": "Surface Modeling", "f": "materi/12-surface-modeling.pdf", "img": "materi/12-surface-modeling.jpg", "p": 8}, {"n": 13, "t": "Pemodelan Solid", "f": "materi/13-pemodelan-solid.pdf", "img": "materi/13-pemodelan-solid.jpg", "p": 8}, {"n": 14, "t": "Feature-Based Modeling", "f": "materi/14-feature-based-modeling.pdf", "img": "materi/14-feature-based-modeling.jpg", "p": 7}, {"n": 15, "t": "Parametric Modelling", "f": "materi/15-parametric-modelling.pdf", "img": "materi/15-parametric-modelling.jpg", "p": 6}, {"n": 16, "t": "Manufaktur Aditif (Additive Manufacturing)", "f": "materi/16-manufaktur-aditif.pdf", "img": "materi/16-manufaktur-aditif.jpg", "p": 8}, {"n": 17, "t": "Desain Produk Kolaboratif", "f": "materi/17-desain-produk-kolaboratif.pdf", "img": "materi/17-desain-produk-kolaboratif.jpg", "p": 8}, {"n": 18, "t": "Manajemen Siklus Hidup Produk (PLM)", "f": "materi/18-manajemen-siklus-hidup-produk.pdf", "img": "materi/18-manajemen-siklus-hidup-produk.jpg", "p": 9}];
+  const G = [["Dasar & Perangkat Komputer",[1,2,3,4,5,8,9]],["Standar Data & Representasi 3D",[6,7]],["Pemodelan Geometri",[10,11,12,13,14,15]],["Manufaktur & Siklus Produk",[16,17,18]]];
+  const root = document.getElementById("groups");
+  G.forEach(([name,nums])=>{
+    const h=document.createElement("h2"); h.className="sec"; h.textContent=name; root.appendChild(h);
+    const g=document.createElement("section"); g.className="grid";
+    g.innerHTML = nums.map(n=>{ const x=D.find(d=>d.n===n);
+      return `<a class="card" href="${x.f}" target="_blank" rel="noopener"><img src="${x.img}" alt="Sampul ${x.t}" loading="lazy"><div><span class="num">TOPIK ${String(n).padStart(2,"0")}</span><b>${x.t}</b><small>📄 ${x.p} slide · PDF</small></div></a>`; }).join("");
+    root.appendChild(g);
+  });
+</script>
+</body>
+</html>
